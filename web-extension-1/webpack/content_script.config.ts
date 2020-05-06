@@ -1,4 +1,3 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
 import * as Webpack from 'webpack';
 
