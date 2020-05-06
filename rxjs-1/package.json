@@ -6,6 +6,7 @@
   "main": "race.js",
   "scripts": {
     "start:speed": "node main-speed.js",
+    "start:race": "node main-race.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
