@@ -8,9 +8,16 @@ const { getCarStates } = require('./getCarsStates');
 const sortByxLocation = (a, b) => (b.xLocation - a.xLocation);
 
 
+/**
+ * Generates leader board of a race in live
+ * 
+ * @param {NodeStyleEventEmitter} race
+ * @returns {Observable}
+ */
 const getLeaderBoard = (race) => {
   const cars = race.getCars();
 
+  // carsStates: Array<Observable<{ carName: string, xLocation: string, time: number, speed: number }>>
   const carsStates = cars.map(carName => (
     getCarStates(race, carName).pipe(
       withLatestFrom(getCarSpeed(race, carName)),
