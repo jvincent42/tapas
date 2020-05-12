@@ -1,6 +1,3 @@
-// this race needs 16 listeners to run so we increase defaultMaxListeners
-require('events').EventEmitter.defaultMaxListeners = 16;
-
 const Table = require('easy-table')
 
 const { getLeaderBoard } = require('./getLeaderBoard');
